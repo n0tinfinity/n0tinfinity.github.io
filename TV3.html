@@ -1,0 +1,29 @@
+<html>
+<!-- playertest -->
+
+<video id=tv3lv width=600 height=300 class="video-js vjs-default-skin" controls></video>
+<script src="https://vjs.zencdn.net/7.18.1/video.js"></script>
+
+<!-- dashjs and videojs-contrib-dash for mpd support -->
+<script src="player/dash.all.min.js"></script>
+<script src="player/videojs-dash.min.js"></script>
+
+<script>
+var player = videojs('tv3lv');
+
+player.ready(function() {
+  player.src({
+  src: 'https://cdnlb.tvplayhome.lt/live/eds/TV3_LV_SD/GO3_LIVE_DASH/TV3_LV_SD.mpd',
+  type: 'application/dash+xml',
+  keySystemOptions: [
+    {
+      name: 'com.widevine.alpha',
+      options: {
+        serverURL: 'https://play.tv3.lv/api/products/2831095/drm/widevine?platform=BROWSER&type=LIVE&tenant=AVOD_LV'
+      }
+    }
+  ]
+});
+  player.play();
+});
+</script>
