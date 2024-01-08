@@ -89,7 +89,8 @@ body {
   background:#5e5e5e
 }
 .header li {
-  float:left
+  float:left;
+  
 }
 .header li a {
   display:block;
@@ -100,13 +101,15 @@ body {
   text-decoration:none;
   border-radius: 10px;
   margin-left: 10px;
+  transition: background-color 0.2s ease;
 }
 .header li p {
   overflow:hidden
 }
 .header li a:hover {
-  background-color:#bbb
+  background-color:#bbb;
 }
+
 .headerRight,
 .headerRight li {
   float:right;
@@ -140,5 +143,4 @@ img {
   display: grid;
   place-items: center;
 }
-
 
