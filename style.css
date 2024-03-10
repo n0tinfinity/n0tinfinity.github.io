@@ -144,3 +144,22 @@ img {
   place-items: center;
 }
 
+button {
+  font-family: Roboto;
+  font-size: 21px;
+  text-align: center;
+  color: #404040;
+  padding: 14px 16px;
+  background-color: #fdfbfa;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bbb;
+}
+textarea {
+  resize: none;
+}
